@@ -10,7 +10,8 @@ namespace Demo.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            //return View();
+            return RedirectToAction("DemoForm");
         }
 
         public ActionResult About()
@@ -24,6 +25,11 @@ namespace Demo.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult DemoForm()
+        {            
             return View();
         }
     }
