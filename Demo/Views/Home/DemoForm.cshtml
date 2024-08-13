@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Demo Page";
+}
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/jquerymin?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/bootlessjs?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/bootmin?v="></script>
+
+<link href="https://pwc.salary.com/CompAnalyst/Cloud/bundles/less?v=" rel="stylesheet" />
+
+<link href="https://pwc.salary.com/CompAnalyst/Cloud/bundles/AccountLess?v=" rel="stylesheet" />
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/respondjs?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/jquerymigrate?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/typeaheadjs?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/salarysawjquery?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/salarytablesawinit?v="></script>
+
+<script src="https://pwc.salary.com/CompAnalyst/Cloud/bundles/salaryautocollapse?v="></script>
+<link rel="icon" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/favicon.ico" />
+<link rel="apple-touch-icon" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/android-chrome-192x192.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/android-chrome-512x512.png" sizes="512x512" />
+<link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/favicon-16x16.png" sizes="16x16" />
+<link href="https://pwc.salary.com/CompAnalyst/Cloud/Styles/ElementStyles/CSS/Cpas_AccountStyles_pwc.css?date=0" rel="stylesheet" />
+
+<script type="text/javascript">
+    (function () {
+        var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else {
+            var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() {
+                var s = d.createElement('script'); s.type = 'text/javascript'; s.defer = true;
+                s.src = 'https://widget.intercom.io/widget/d1azckl2';
+                var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+            } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); }
+        }
+    })()
+</script>
+
+<script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/UtilityScripts/Salary/Cpau_CacheClientActionTime.js?v="></script>
+<body class="sa-tmpl sa-tmpl-dashboard">
+    <form name="mainform" id="mainform" method="post">
+        <script type="text/javascript">
+            if (typeof SalLocalLabels === 'undefined') { window.SalLocalLabels = {}; } SalLocalLabels["RTXT_UNRECONGNIZED_EMAIL"] = "Unrecognized e-mail address";
+            SalLocalLabels["RTXT_INVALID_PASSWORD"] = "Invalid Password.";
+            SalLocalLabels["RTXT_INVALID_LOGINID"] = "Invalid Login ID.";
+            SalLocalLabels["RTXT_UNRECONGNIZED_LOGINID"] = "Unrecognized Login ID";
+
+        </script>
+
+        <script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/Styles/Salary/js/row-collapse-arrow-position.js?v="></script>
+        <script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/UtilityScripts/Salary/Cpau_centerModal.js?v="></script>
+        <script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/UtilityScripts/Salary/jsencrypt.min.js?v="></script>
+
+
+
+
+        <input type="hidden" id="isloginfromnewpotal" name="isloginfromnewpotal" value="1">
+        <!-- Main content -->
+        <div class="sa-login sa-login-welcome padding-top10" id="ca-login">
+            <div class="sa-login-logo">
+                <img src="https://pwc.salary.com/CompAnalyst/Cloud/Styles/Salary/img/logo_white70x52_pwc.svg" alt="salary.com logo" class="sa-login-logo-img">
+
+            </div>
+            <div class="sa-login-panel sa-login-panel-welcome">
+                <div class="row">
+                    <!-- RenderBody -->
+
+
+
+                    <input type="hidden" id="errormsg" name="errormsg" value="">
+                    <input type="hidden" id="errortypecode" name="errortypecode" value="">
+                    <input type="hidden" id="encryptionpagename" name="encryptionpagename" value="YujiZpN5h4jBCh9m1G4ObA==">
+                    <div class="col-sm-6 sa-login-form" id="sa_login_form">
+                        <div id="sa-alert-error" style="display:none" class="alert alert-danger" role="alert">
+                            <span class="sa-alert-icon icon-alert"></span> <strong><span id="sa-alert-span-msg"></span></strong>
+                        </div>
+                        <div class="form-group ">
+                            <label for="login-email">LOGIN ID</label>
+                            <input type="text" class="form-control" id="loginid" name="loginid" autocomplete="off" maxlength="50">
+                        </div>
+                        <div class="form-group ">
+                            <label for="login-password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" maxlength="30" autocomplete="off">
+                        </div>
+                        <a href="https://pwc.salary.com/CompAnalyst/Cloud/Account/Cpal_Account_ForgotPassword" class="sa-login-link pull-left"><u>Forgot your password?</u></a>
+                        <button type="button" class="btn btn-login pull-right" onclick="javascript: validateLogin();">
+                            Sign In 
+                            @*<span class="icon-arrow-right icon-right"></span>*@
+                        </button>
+                        <p class="sa-login-contact margin-top65">Support:<br>844-725-2792 (844-Salary2) M-F 9am - 6pm ET</p>
+                        <a class="sa-login-contact" href="mailto:CompAnalystSupport@salary.com">CompAnalystSupport@salary.com</a>
+                        <div class="sa-login-ama">
+                            <button type="button" class="btn btn-cta" id="caIntercomMessager">
+                                @*<span class="icon-email icon-bolder"></span>*@
+                                Email
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 sa-login-info sa-login-img no-errorMsg">
+                        <a href="mailto:cs.group@salary.com"><img class="login-right-img" src="https://pwc.salary.com/CompAnalyst/Cloud/Images/login_compxl.png"></a>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="sa-login-footer">
+                © Copyright Salary.com 2024. All Rights Reserved. <a href="Javascript:salOpenWindow('http://www.salary.com/privacy-policy/','legalWin','700','500','no','yes','yes');">Privacy Policy</a>
+            </footer>
+        </div><!-- /sa-login -->
+
+        <script type="text/javascript">
+            window.Intercom("boot", {
+                app_id: "d1azckl2",
+                product: 'CompAnalyst',
+                //custom_launcher_selector: '#caIntercomMessager',
+                hide_default_launcher: true,
+                hide: false
+            });
+        </script>
+
+
+
+
+
+
+    </form>
+</body>
+
