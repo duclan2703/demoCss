@@ -28,7 +28,8 @@
 <link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/android-chrome-512x512.png" sizes="512x512" />
 <link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="https://pwc.salary.com/CompAnalyst/Cloud/Images/favicon-16x16.png" sizes="16x16" />
-<link href="https://pwc.salary.com/CompAnalyst/Cloud/Styles/ElementStyles/CSS/Cpas_AccountStyles_pwc.css?date=0" rel="stylesheet" />
+@*<link href="https://pwc.salary.com/CompAnalyst/Cloud/Styles/ElementStyles/CSS/Cpas_AccountStyles_pwc.css?date=0" rel="stylesheet" />*@
+@Styles.Render($"~/Styles/CSS/Style_{@ViewBag.StyleVersion}.css");
 
 <script type="text/javascript">
     (function () {
@@ -52,14 +53,9 @@
             SalLocalLabels["RTXT_UNRECONGNIZED_LOGINID"] = "Unrecognized Login ID";
 
         </script>
-
         <script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/Styles/Salary/js/row-collapse-arrow-position.js?v="></script>
         <script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/UtilityScripts/Salary/Cpau_centerModal.js?v="></script>
         <script type="text/javascript" src="https://pwc.salary.com/CompAnalyst/Cloud/UtilityScripts/Salary/jsencrypt.min.js?v="></script>
-
-
-
-
         <input type="hidden" id="isloginfromnewpotal" name="isloginfromnewpotal" value="1">
         <!-- Main content -->
         <div class="sa-login sa-login-welcome padding-top10" id="ca-login">
@@ -70,9 +66,6 @@
             <div class="sa-login-panel sa-login-panel-welcome">
                 <div class="row">
                     <!-- RenderBody -->
-
-
-
                     <input type="hidden" id="errormsg" name="errormsg" value="">
                     <input type="hidden" id="errortypecode" name="errortypecode" value="">
                     <input type="hidden" id="encryptionpagename" name="encryptionpagename" value="YujiZpN5h4jBCh9m1G4ObA==">
@@ -123,12 +116,6 @@
                 hide: false
             });
         </script>
-
-
-
-
-
-
     </form>
 </body>
 

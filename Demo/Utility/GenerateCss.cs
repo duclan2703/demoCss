@@ -10,7 +10,7 @@ namespace Demo.Utility
 {
     public class GenerateCss
     {
-        public static void GenerateCssFile()
+        public static void GenerateCssFile(int domain)
         {
             var data = new List<ColorCustomization>()
             {
@@ -52,6 +52,45 @@ namespace Demo.Utility
                     CssValue = "#007dbc",
                     ValueType = (int)CssValueType.Solid,
                     ParentId = 3
+                },
+                new ColorCustomization
+                {
+                    Id = 6,
+                    CssName = "btn-cta.active.focus,.btn-cta.active:focus,.btn-cta.active:hover,.btn-cta.focus,.btn-cta:active.focus,.btn-cta:active:focus,.btn-cta:active:hover,.btn-cta:focus,.btn-cta:hover,.open>.dropdown-toggle.btn-cta.focus,.open>.dropdown-toggle.btn-cta:focus,.open>.dropdown-toggle.btn-cta:hover",
+                    CssType = (int)CssType.Class,
+                },
+                new ColorCustomization()
+                {
+                    Id = 7,
+                    CssName = "background-color",
+                    CssType= (int)CssType.Property,
+                    CssValue = "#075484",
+                    ValueType = (int)CssValueType.Solid,
+                    ParentId = 6
+                },
+                new ColorCustomization()
+                {
+                    Id = 8,
+                    CssName = "border-color",
+                    CssType= (int)CssType.Property,
+                    CssValue = "#075484",
+                    ValueType = (int)CssValueType.Solid,
+                    ParentId = 6
+                },
+                new ColorCustomization
+                {
+                    Id = 9,
+                    CssName = "sa-login-panel",
+                    CssType = (int)CssType.Class,
+                },
+                new ColorCustomization()
+                {
+                    Id = 10,
+                    CssName = "background",
+                    CssType= (int)CssType.Property,
+                    CssValue = "linear-gradient(120deg,rgba(225,255,255,.2) 0,rgba(225,255,255,.2) 75%,rgba(225,255,255,.2) 100%)",
+                    ValueType = (int)CssValueType.Gradient,
+                    ParentId = 9
                 }
             };
             var cssTree = new TreeBuilder().BuildTree(data);
@@ -69,13 +108,13 @@ namespace Demo.Utility
             }
 
             var css = cssBuilder.ToString();
-            using (var writer = new StreamWriter(Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}/Styles/CSS", "Style.css")))
+            using (var writer = new StreamWriter(Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}/Styles/CSS", $"Style_{domain}.css")))
             {
                 writer.Write(css);
             }
         }
 
-        public static void GenerateLessFile()
+        public static void GenerateLessFile(int domain)
         {
             var data = new List<ColorCustomization>()
             {
@@ -144,7 +183,7 @@ namespace Demo.Utility
             }
 
             var lessCss = lessCssBuilder.ToString();
-            using (var writer = new StreamWriter(Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}/Styles/LESS", "LessStyle.less")))
+            using (var writer = new StreamWriter(Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}/Styles/LESS", $"LessStyle_{domain}.less")))
             {
                 writer.Write(lessCss);
             }

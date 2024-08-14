@@ -29,7 +29,8 @@ namespace Demo.Controllers
         }
 
         public ActionResult DemoForm()
-        {            
+        {
+            ViewBag.StyleVersion = HttpContext.Request.Url.Port;
             return View();
         }
     }

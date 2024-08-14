@@ -19,8 +19,6 @@ namespace Demo
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            GenerateCss.GenerateLessFile();
-            GenerateCss.GenerateCssFile();
         }
 
         protected void Application_BeginRequest(object source, EventArgs e)
@@ -31,7 +29,9 @@ namespace Demo
                 HttpContext context = app.Context;
                 Initialize(context);
                 var url = context.Request.Url;
-                var domain = url.Host;
+                int port = url.Port;
+                GenerateCss.GenerateLessFile(port);
+                GenerateCss.GenerateCssFile(port);
                 BundleConfig.RegisterBundles(BundleTable.Bundles);
             }
         }
