@@ -1,4 +1,5 @@
 ﻿using Demo.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,87 +13,8 @@ namespace Demo.Utility
     {
         public static void GenerateCssFile(int domain)
         {
-            var data = new List<ColorCustomization>()
-            {
-                new ColorCustomization()
-                {
-                    Id = 1,
-                    CssName = "sa-login-panel:before",
-                    CssType = (int)CssType.Class,
-                },
-                new ColorCustomization()
-                {
-                    Id = 2,
-                    CssName = "background",
-                    CssType= (int)CssType.Property,
-                    CssValue = "linear-gradient(to right, #e669a2 0%, #db2e75 34%, #99ca3f 78%, #93eb3e 100%)",
-                    ValueType = (int)CssValueType.Gradient,
-                    ParentId = 1
-                },
-                new ColorCustomization()
-                {
-                    Id=3,
-                    CssName = "btn-cta",
-                    CssType = (int)CssType.Class,
-                },
-                new ColorCustomization()
-                {
-                    Id = 4,
-                    CssName = "background-color",
-                    CssType= (int)CssType.Property,
-                    CssValue = "#007dbc",
-                    ValueType = (int)CssValueType.Solid,
-                    ParentId =3 
-                },
-                new ColorCustomization()
-                {
-                    Id = 5,
-                    CssName = "border-color",
-                    CssType= (int)CssType.Property,
-                    CssValue = "#007dbc",
-                    ValueType = (int)CssValueType.Solid,
-                    ParentId = 3
-                },
-                new ColorCustomization
-                {
-                    Id = 6,
-                    CssName = "btn-cta.active.focus,.btn-cta.active:focus,.btn-cta.active:hover,.btn-cta.focus,.btn-cta:active.focus,.btn-cta:active:focus,.btn-cta:active:hover,.btn-cta:focus,.btn-cta:hover,.open>.dropdown-toggle.btn-cta.focus,.open>.dropdown-toggle.btn-cta:focus,.open>.dropdown-toggle.btn-cta:hover",
-                    CssType = (int)CssType.Class,
-                },
-                new ColorCustomization()
-                {
-                    Id = 7,
-                    CssName = "background-color",
-                    CssType= (int)CssType.Property,
-                    CssValue = "#075484",
-                    ValueType = (int)CssValueType.Solid,
-                    ParentId = 6
-                },
-                new ColorCustomization()
-                {
-                    Id = 8,
-                    CssName = "border-color",
-                    CssType= (int)CssType.Property,
-                    CssValue = "#075484",
-                    ValueType = (int)CssValueType.Solid,
-                    ParentId = 6
-                },
-                new ColorCustomization
-                {
-                    Id = 9,
-                    CssName = "sa-login-panel",
-                    CssType = (int)CssType.Class,
-                },
-                new ColorCustomization()
-                {
-                    Id = 10,
-                    CssName = "background",
-                    CssType= (int)CssType.Property,
-                    CssValue = "linear-gradient(120deg,rgba(225,255,255,.2) 0,rgba(225,255,255,.2) 75%,rgba(225,255,255,.2) 100%)",
-                    ValueType = (int)CssValueType.Gradient,
-                    ParentId = 9
-                }
-            };
+            string jsonData = File.ReadAllText($"{AppDomain.CurrentDomain.BaseDirectory}/Mock/{domain}.json");
+            var data = JsonConvert.DeserializeObject<List<ColorCustomization>>(jsonData);
             var cssTree = new TreeBuilder().BuildTree(data);
 
             var cssBuilder = new StringBuilder();
